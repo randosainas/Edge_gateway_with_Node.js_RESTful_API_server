@@ -51,7 +51,11 @@ For static public ip I used the most minimal cloud VM offered by Google Cloud. T
 
 ## Notes
 tsc API_bacend.ts to compile to API_backend.js
+
 nodejs used to run the server, node API_backend.js
-Credentials store linking to a FAstly service can be done with Fastly API or UI not CLI.
+
+Credentials store linking to a Fastly service can be done with Fastly API or UI not CLI.
+
 I am using dotenv to read backend .env, `npm install dotenv`
+
 Used apt on the VM and allowed only ssh to access it. `sudo apt install nodejs npm`
