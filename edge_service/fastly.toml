@@ -1,0 +1,28 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://www.fastly.com/documentation/reference/compute/fastly-toml
+
+authors = [""]
+cloned_from = "https://github.com/fastly/compute-starter-kit-javascript-default"
+description = ""
+language = "javascript"
+manifest_version = 3
+name = "learn_fastly_init"
+service_id = "RoHGIiKPq2PFFXQ2KiagZR"
+
+[[backend]]
+name = "backend_1"
+address = "35.231.102.104"
+port = 3000
+use_ssl = true
+ssl_cert_hostname = "35.231.102.104"
+ssl_sni_hostname = "35.231.102.104"
+override_host = "35.231.102.104"
+
+#bind the secret store named credentials to this servive
+[setup.secret_stores.credentials]
+
+# needed for fastly serve [local_server.secret_stores.credentials]
+
+[scripts]
+  build = "npm run build"
+  post_init = "npm install"

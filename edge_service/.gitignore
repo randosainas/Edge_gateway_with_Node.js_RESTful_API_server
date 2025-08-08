@@ -1,0 +1,10 @@
+/tools/
+/pkg/*.tar.gz
+/*.tar.gz
+/*.deb
+/fastly
+/node_modules
+/package-lock.json
+/package.json
+/server.log
+/bin

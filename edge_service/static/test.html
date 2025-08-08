@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Test example</title>
+</head>
+
+<body>
+
+	<h1 id="demo">Not changed.</h1>
+	<button id="toggleBtn">Toggle test page</button>
+	<script><!-- Document is the owner of all other objects. With this object we have all the power needed to create a dynamic html. getElementById - find element el id. addEventListner() is a method that attaches an event handler to an element. -->
+		const btn = document.getElementById('toggleBtn')
+		if (btn !== null) {
+			btn.addEventListener('click', () => {
+				fetch('/toggle', {method: 'POST'})
+					.then(res => res.text())
+					.then(text => {
+						document.getElementById('demo').innerText = text;
+					});
+			});
+		}
+		else
+			console.error("toggleBtn not found in DOM!");
+	</script>
+</body>
+
+</html>
